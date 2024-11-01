@@ -1,290 +1,293 @@
 <html lang="en">
-
-<head>
-	<style>
-		.loader-center {
-			background-color: white;
-			position: absolute;
-			left: 0;
-			right: 0;
-			top: 0;
-			bottom: 0;
-			width: 100%;
-			height: 100%;
-		}
-
-		.loader-list {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			margin: -90px 0 0 -80px;
-		}
-
-
-		.loader {
-			position: absolute;
-			top: 80px;
-			left: 65px;
-			color: red;
-			border-radius: 50%;
-			transition: 1s all;
-		}
-
-		.loader-top {
-			position: absolute;
-			border: 5px solid transparent;
-			border-top-color: rgb(0, 167, 89);
-			border-radius: 50%;
-			-webkit-animation: loading linear infinite;
-			-moz-animation: loading linear infinite;
-			-o-animation: loading linear infinite;
-			animation: loading linear infinite;
-		}
-
-		.loader-bottom {
-			position: absolute;
-			border: 5px solid transparent;
-			border-bottom-color: rgb(253, 202, 1);
-			border-radius: 50%;
-			-webkit-animation: loading linear infinite;
-			-moz-animation: loading linear infinite;
-			-o-animation: loading linear infinite;
-			animation: loading linear infinite;
-		}
-
-		.loader-top.one {
-			top: 24px;
-			left: 15px;
-			width: 120px;
-			height: 120px;
-			animation-duration: 1s;
-		}
-
-		.loader-top.two {
-			top: 37px;
-			left: 30px;
-			width: 90px;
-			height: 90px;
-			animation-duration: 1.2s;
-		}
-
-		.loader-top.three {
-			top: 50px;
-			left: 40px;
-			width: 70px;
-			height: 70px;
-			animation-duration: 1.4s;
-		}
-
-		.loader-top.four {
-			top: 64px;
-			left: 50px;
-			width: 50px;
-			height: 50px;
-			animation-duration: 1.6s;
-		}
-
-		.loader-bottom.one {
-			top: 23px;
-			left: 15px;
-			width: 120px;
-			height: 120px;
-			animation-duration: 1s;
-		}
-
-		.loader-bottom.two {
-			top: 42px;
-			left: 30px;
-			width: 90px;
-			height: 90px;
-			animation-duration: 1.2s;
-		}
-
-		.loader-bottom.three {
-			top: 51px;
-			left: 40px;
-			width: 70px;
-			height: 70px;
-			animation-duration: 1.4s;
-		}
-
-		.loader-bottom.four {
-			top: 59px;
-			left: 50px;
-			width: 50px;
-			height: 50px;
-			animation-duration: 1.6s;
-		}
-
-		@-webkit-keyframes loading {
-			from {
-				-webkit-transform: rotateZ(360deg);
-				-moz-transform: rotateZ(360deg);
-				-ms-transform: rotateZ(360deg);
-				transform: rotateZ(360deg);
+	<head>
+		<style>
+			.loader-center {
+				background-color: white;
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				width: 100%;
+				height: 100%;
 			}
-
-			to {
-				-webkit-transform: rotateZ(0);
-				-moz-transform: rotateZ(0);
-				-ms-transform: rotateZ(0);
-				transform: rotateZ(0);
+	
+			.loader-list {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin: -90px 0 0 -80px;
 			}
-		}
-
-		@-moz-keyframes loading {
-			from {
-				-webkit-transform: rotateZ(360deg);
-				-moz-transform: rotateZ(360deg);
-				-ms-transform: rotateZ(360deg);
-				transform: rotateZ(360deg);
+	
+	
+			.loader {
+				position: absolute;
+				top: 80px;
+				left: 65px;
+				color: red;
+				border-radius: 50%;
+				transition: 1s all;
 			}
-
-			to {
-				-webkit-transform: rotateZ(0);
-				-moz-transform: rotateZ(0);
-				-ms-transform: rotateZ(0);
-				transform: rotateZ(0);
+	
+			.loader-top {
+				position: absolute;
+				border: 5px solid transparent;
+				border-top-color: rgb(0, 167, 89);
+				border-radius: 50%;
+				-webkit-animation: loading linear infinite;
+				-moz-animation: loading linear infinite;
+				-o-animation: loading linear infinite;
+				animation: loading linear infinite;
 			}
-		}
-
-		@-ms-keyframes loading {
-			from {
-				-webkit-transform: rotateZ(360deg);
-				-moz-transform: rotateZ(360deg);
-				-ms-transform: rotateZ(360deg);
-				transform: rotateZ(360deg);
+	
+			.loader-bottom {
+				position: absolute;
+				border: 5px solid transparent;
+				border-bottom-color: rgb(253, 202, 1);
+				border-radius: 50%;
+				-webkit-animation: loading linear infinite;
+				-moz-animation: loading linear infinite;
+				-o-animation: loading linear infinite;
+				animation: loading linear infinite;
 			}
-
-			to {
-				-webkit-transform: rotateZ(0);
-				-moz-transform: rotateZ(0);
-				-ms-transform: rotateZ(0);
-				transform: rotateZ(0);
+	
+			.loader-top.one {
+				top: 24px;
+				left: 15px;
+				width: 120px;
+				height: 120px;
+				animation-duration: 1s;
 			}
-		}
-
-		@-ms-keyframes loading {
-			from {
-				-webkit-transform: rotateZ(360deg);
-				-moz-transform: rotateZ(360deg);
-				-ms-transform: rotateZ(360deg);
-				transform: rotateZ(360deg);
+	
+			.loader-top.two {
+				top: 37px;
+				left: 30px;
+				width: 90px;
+				height: 90px;
+				animation-duration: 1.2s;
 			}
-
-			to {
-				-webkit-transform: rotateZ(0);
-				-moz-transform: rotateZ(0);
-				-ms-transform: rotateZ(0);
-				transform: rotateZ(0);
+	
+			.loader-top.three {
+				top: 50px;
+				left: 40px;
+				width: 70px;
+				height: 70px;
+				animation-duration: 1.4s;
 			}
-		}
-
-		@keyframes loading {
-			from {
-				-webkit-transform: rotateZ(360deg);
-				-moz-transform: rotateZ(360deg);
-				-ms-transform: rotateZ(360deg);
-				transform: rotateZ(360deg);
+	
+			.loader-top.four {
+				top: 64px;
+				left: 50px;
+				width: 50px;
+				height: 50px;
+				animation-duration: 1.6s;
 			}
-
-			to {
-				-webkit-transform: rotateZ(0);
-				-moz-transform: rotateZ(0);
-				-ms-transform: rotateZ(0);
-				transform: rotateZ(0);
+	
+			.loader-bottom.one {
+				top: 23px;
+				left: 15px;
+				width: 120px;
+				height: 120px;
+				animation-duration: 1s;
 			}
-		}
-	</style>
-	<style>
-		/* Initially hide the extra text */
-		.hidden-text {
-			max-height: 100px;
-			/* Set a height to control the visible portion of the text */
-			overflow: hidden;
-			transition: max-height 0.5s ease;
-		}
+	
+			.loader-bottom.two {
+				top: 42px;
+				left: 30px;
+				width: 90px;
+				height: 90px;
+				animation-duration: 1.2s;
+			}
+	
+			.loader-bottom.three {
+				top: 51px;
+				left: 40px;
+				width: 70px;
+				height: 70px;
+				animation-duration: 1.4s;
+			}
+	
+			.loader-bottom.four {
+				top: 59px;
+				left: 50px;
+				width: 50px;
+				height: 50px;
+				animation-duration: 1.6s;
+			}
+	
+			@-webkit-keyframes loading {
+				from {
+					-webkit-transform: rotateZ(360deg);
+					-moz-transform: rotateZ(360deg);
+					-ms-transform: rotateZ(360deg);
+					transform: rotateZ(360deg);
+				}
+	
+				to {
+					-webkit-transform: rotateZ(0);
+					-moz-transform: rotateZ(0);
+					-ms-transform: rotateZ(0);
+					transform: rotateZ(0);
+				}
+			}
+	
+			@-moz-keyframes loading {
+				from {
+					-webkit-transform: rotateZ(360deg);
+					-moz-transform: rotateZ(360deg);
+					-ms-transform: rotateZ(360deg);
+					transform: rotateZ(360deg);
+				}
+	
+				to {
+					-webkit-transform: rotateZ(0);
+					-moz-transform: rotateZ(0);
+					-ms-transform: rotateZ(0);
+					transform: rotateZ(0);
+				}
+			}
+	
+			@-ms-keyframes loading {
+				from {
+					-webkit-transform: rotateZ(360deg);
+					-moz-transform: rotateZ(360deg);
+					-ms-transform: rotateZ(360deg);
+					transform: rotateZ(360deg);
+				}
+	
+				to {
+					-webkit-transform: rotateZ(0);
+					-moz-transform: rotateZ(0);
+					-ms-transform: rotateZ(0);
+					transform: rotateZ(0);
+				}
+			}
+	
+			@-ms-keyframes loading {
+				from {
+					-webkit-transform: rotateZ(360deg);
+					-moz-transform: rotateZ(360deg);
+					-ms-transform: rotateZ(360deg);
+					transform: rotateZ(360deg);
+				}
+	
+				to {
+					-webkit-transform: rotateZ(0);
+					-moz-transform: rotateZ(0);
+					-ms-transform: rotateZ(0);
+					transform: rotateZ(0);
+				}
+			}
+	
+			@keyframes loading {
+				from {
+					-webkit-transform: rotateZ(360deg);
+					-moz-transform: rotateZ(360deg);
+					-ms-transform: rotateZ(360deg);
+					transform: rotateZ(360deg);
+				}
+	
+				to {
+					-webkit-transform: rotateZ(0);
+					-moz-transform: rotateZ(0);
+					-ms-transform: rotateZ(0);
+					transform: rotateZ(0);
+				}
+			}
+		</style>
+		<style>
+			/* Initially hide the extra text */
+			.hidden-text {
+				max-height: 100px;
+				/* Set a height to control the visible portion of the text */
+				overflow: hidden;
+				transition: max-height 0.5s ease;
+			}
+	
+			/* When showing the full text */
+			.show-text {
+				max-height: none;
+				/* Allows the full text to be visible */
+			}
+		</style>
+	
+		<!-- owl carousel -->
+		<style>
+			/* Icon color for all slides */
+			.testimonial-icon {
+				color: rgb(0, 167, 89);
+				/* Desired color for icons */
+			}
+	
+			/* Additional styling */
+			.testimonial-slider .block {
+				padding: 20px;
+				background: #f8f8f8;
+				border-radius: 8px;
+				text-align: center;
+			}
+	
+			.testimonial-slider h3 {
+				margin-top: 10px;
+				font-size: 1.5em;
+				color: #333;
+			}
+	
+			.testimonial-slider p {
+				font-size: 1em;
+				color: #666;
+			}
+		</style>
+		<!-- Basic Page Needs
+	  ================================================== -->
+		<meta charset="utf-8">
+		<title>Roya business</title>
+	
+		<!-- Mobile Specific Metas
+	  ================================================== -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="Bootstrap App Landing Template">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+		<meta name="author" content="Themefisher">
+		<meta name="generator" content="Themefisher Small Apps Template v1.0">
+	
+	
+		<!-- Favicon -->
+		<link rel="shortcut icon" type="image/x-icon" href="images/favicon-16x16.png" />
+	
+		<!-- PLUGINS CSS STYLE -->
+		<link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+		<link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
+		<link rel="stylesheet" href="plugins/slick/slick.css">
+		<link rel="stylesheet" href="plugins/slick/slick-theme.css">
+		<link rel="stylesheet" href="plugins/fancybox/jquery.fancybox.min.css">
+		<link rel="stylesheet" href="plugins/aos/aos.css">
+		<!-- Bootstrap CSS -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+	
+	
+		<!-- CUSTOM CSS -->
+		<link href="/theme/css/style.css" rel="stylesheet">
+		<script type="text/javascript">
+			function googleTranslateElementInit() {
+				new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'ar' }, 'google_translate_element');
+			}
+		</script>
+		<script type="text/javascript"
+			src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+	
+	</head>
+	
+	<body id="google_translate_element" class="body-wrapper" data-spy="scroll" data-target=".privacy-nav"
+		onload="googleTranslateElementInit()">
+<!-- <body class="body-wrapper" data-spy="scroll" data-target=".privacy-nav" data-aos-easing="ease" data-aos-duration="400"
+	data-aos-delay="0" cz-shortcut-listen="true" onload="googleTranslateElementInit()"> -->
 
-		/* When showing the full text */
-		.show-text {
-			max-height: none;
-			/* Allows the full text to be visible */
-		}
-	</style>
 
-	<!-- owl carousel -->
-	<style>
-		/* Icon color for all slides */
-		.testimonial-icon {
-			color: rgb(0, 167, 89);
-			/* Desired color for icons */
-		}
-
-		/* Additional styling */
-		.testimonial-slider .block {
-			padding: 20px;
-			background: #f8f8f8;
-			border-radius: 8px;
-			text-align: center;
-		}
-
-		.testimonial-slider h3 {
-			margin-top: 10px;
-			font-size: 1.5em;
-			color: #333;
-		}
-
-		.testimonial-slider p {
-			font-size: 1em;
-			color: #666;
-		}
-	</style>
-	<!-- Basic Page Needs
-  ================================================== -->
-	<meta charset="utf-8">
-	<title>Roya business</title>
-
-	<!-- Mobile Specific Metas
-  ================================================== -->
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="description" content="Bootstrap App Landing Template">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-	<meta name="author" content="Themefisher">
-	<meta name="generator" content="Themefisher Small Apps Template v1.0">
-
-
-	<!-- Favicon -->
-	<link rel="shortcut icon" type="image/x-icon" href="images/favicon-16x16.png" />
-
-	<!-- PLUGINS CSS STYLE -->
-	<link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
-	<link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
-	<link rel="stylesheet" href="plugins/slick/slick.css">
-	<link rel="stylesheet" href="plugins/slick/slick-theme.css">
-	<link rel="stylesheet" href="plugins/fancybox/jquery.fancybox.min.css">
-	<link rel="stylesheet" href="plugins/aos/aos.css">
-	<!-- Bootstrap CSS -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-
-
-	<!-- CUSTOM CSS -->
-	<link href="/theme/css/style.css" rel="stylesheet">
-	<script type="text/javascript">
-		function googleTranslateElementInit() {
-			new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'ar' }, 'google_translate_element');
-		}
-	</script>
-	<script type="text/javascript"
-		src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-</head>
-
-<body class="body-wrapper" data-spy="scroll" data-target=".privacy-nav" data-aos-easing="ease" data-aos-duration="400"
-	data-aos-delay="0" cz-shortcut-listen="true" onload="googleTranslateElementInit()">
-
-	<nav class="navbar main-nav navbar-expand-lg px-2 px-sm-0 py-2 py-lg-0 fixed-navbar" >
+	<nav class="navbar main-nav navbar-expand-lg px-2 px-sm-0 py-2 py-lg-0 fixed-navbar">
 		<div class="container">
-			<a class="navbar-brand" href="index.html"><img class="rounded-circle" src="images/Frame 37.png" height="60px" width="60px" alt="logo"></a>
+			<a class="navbar-brand" href="index.html"><img class="rounded-circle" src="images/Frame 37.png"
+					height="60px" width="60px" alt="logo"></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
 				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 				<span id="icons" class="ti-menu"></span>
@@ -297,14 +300,19 @@
 						</a>
 						<!-- Dropdown list -->
 						<ul class="dropdown-menu">
-							<li><a style=" color: rgb(0,167,89);" class="dropdown-item " href="addmoney.html">Add money</a></li>
-							<li><a style=" color: rgb(0,167,89);" class="dropdown-item" href="transfermoney.html">Tranfer to contacts</a></li>
+							<li><a style=" color: rgb(0,167,89);" class="dropdown-item " href="addmoney.html">Add
+									money</a></li>
+							<li><a style=" color: rgb(0,167,89);" class="dropdown-item"
+									href="transfermoney.html">Wallet to Wallet</a></li>
 							<!-- <li><a style=" color: rgb(0,167,89);" class="dropdown-item " href="homepage-3.html">Request Money</a></li> -->
-							<li><a style=" color: rgb(0,167,89);" class="dropdown-item " href="index.html">Local Transfer</a></li>
+							<li><a style=" color: rgb(0,167,89);" class="dropdown-item " href="">Local Bank Transfer</a></li>
+							<li><a style=" color: rgb(0,167,89);" class="dropdown-item " href="index.html">QR
+									Payment</a></li>
 							<!-- <li><a style=" color: rgb(0,167,89);" class="dropdown-item" href="homepage-2.html">International transfer</a></li> -->
 							<!-- <li><a style=" color: rgb(0,167,89);" class="dropdown-item " href="homepage-3.html">roya business bills & sawa</a></li> -->
 							<!-- <li><a style=" color: rgb(0,167,89);" class="dropdown-item " href="index.html">Send Gift</a></li> -->
-							<li><a style=" color: rgb(0,167,89);" class="dropdown-item " href="index.html">SADAD</a></li>
+							<li><a style=" color: rgb(0,167,89);" class="dropdown-item " href="index.html">SADAD</a>
+							</li>
 							<!-- <li><a style=" color: rgb(0,167,89);" class="dropdown-item" href="homepage-2.html">Musaned</a></li> -->
 							<!-- <li><a style=" color: rgb(0,167,89);" class="dropdown-item " href="homepage-3.html">Qitaf</a></li> -->
 							<!-- <li><a style=" color: rgb(0,167,89);" class="dropdown-item " href="index.html">Business Payments</a></li> -->
@@ -313,12 +321,15 @@
 							<!-- <li><a style=" color: rgb(0,167,89);" class="dropdown-item " href="homepage-3.html">Delete/Close Account</a></li> -->
 
 							<li class="dropdown dropdown-submenu dropright">
-								<a style=" color: rgb(0,167,89);" class="dropdown-item dropdown-toggle" href="#!" id="dropdown0301" role="button"
-									data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cards</a>
+								<a style=" color: rgb(0,167,89);" class="dropdown-item dropdown-toggle" href="#!"
+									id="dropdown0301" role="button" data-toggle="dropdown" aria-haspopup="true"
+									aria-expanded="false">Cards</a>
 
 								<ul class="dropdown-menu" aria-labelledby="dropdown0301">
-									<li><a style=" color: rgb(0,167,89);" class="dropdown-item" href="index.html">Mada</a></li>
-									<li><a style=" color: rgb(0,167,89);" class="dropdown-item" href="index.html">Visa Card</a></li>
+									<li><a style=" color: rgb(0,167,89);" class="dropdown-item"
+											href="index.html">Mada</a></li>
+									<li><a style=" color: rgb(0,167,89);" class="dropdown-item"
+											href="index.html">Visa Card</a></li>
 								</ul>
 							</li>
 						</ul>
@@ -329,9 +340,11 @@
 						</a>
 						<!-- Dropdown list -->
 						<ul class="dropdown-menu">
-							<!-- <li><a class="dropdown-item @@team" href="team.html">Team</a></li>
-							<li><a class="dropdown-item @@career" href="career.html">Career</a></li>
-							<li><a class="dropdown-item @@blog" href="blog.html">Blog</a></li>
+							<li><a style=" color: rgb(0,167,89);" class="dropdown-item @@team"
+									href="business_services.html">Business Services</a></li>
+							<li><a style=" color: rgb(0,167,89);" class="dropdown-item @@career"
+									href="business_payments.html">Business Payments</a></li>
+							<!-- <li><a class="dropdown-item @@blog" href="blog.html">Blog</a></li>
 							<li><a class="dropdown-item @@blogSingle" href="blog-single.html">Blog Single</a></li>
 							<li><a class="dropdown-item @@privacy" href="privacy-policy.html">Privacy</a></li>
 							<li><a class="dropdown-item @@faq" href="FAQ.html">FAQ</a></li>
@@ -340,38 +353,48 @@
 							<li><a class="dropdown-item" href="404.html">404</a></li>
 							<li><a class="dropdown-item" href="comming-soon.html">Coming Soon</a></li> -->
 
-							<li class="dropdown dropdown-submenu">
-								<a style=" color: rgb(0,167,89);" class="dropdown-item dropdown-toggle" href="#!" id="dropdown0501" role="button"
-									data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Business
-									Services</a>
+							<!-- <li class="dropdown dropdown-submenu">
+								<a style=" color: rgb(0,167,89);" class="dropdown-item dropdown-toggle" href="about.html"
+									id="dropdown0501" role="button" data-toggle="dropdown" aria-haspopup="true"
+									aria-expanded="false">Business
+									Services</a></li> -->
 
-							<li><a style=" color: rgb(0,167,89);" class="dropdown-item " href="index.html">Business Payments</a></li>
+							<!-- <li><a style=" color: rgb(0,167,89);" class="dropdown-item " href="index.html">Business
+									Payments</a></li> -->
 							<ul style=" color: rgb(0,167,89);" class="dropdown-menu" aria-labelledby="dropdown0501">
-									<!-- <li><a style=" color: rgb(0,167,89);" class="dropdown-item" href="index.html">Become a merchant</a></li> -->
-									<li><a style=" color: rgb(0,167,89);" class="dropdown-item" href="index.html">Merchant App</a></li>
-									<li><a style=" color: rgb(0,167,89);" class="dropdown-item" href="index.html">Merchant portal</a></li>
-								</ul>
-							</li>
-							<li class="dropdown dropdown-submenu dropright">
-								<a style=" color: rgb(0,167,89);" class="dropdown-item dropdown-toggle" href="#!" id="dropdown0501" role="button"
-									data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Overview</a>
+								<!-- <li><a style=" color: rgb(0,167,89);" class="dropdown-item" href="index.html">Become a merchant</a></li> -->
+								<li><a style=" color: rgb(0,167,89);" class="dropdown-item"
+										href="index.html">Merchant App</a></li>
+								<li><a style=" color: rgb(0,167,89);" class="dropdown-item"
+										href="index.html">Merchant portal</a></li>
+							</ul>
+					</li>
+					<li class="dropdown dropdown-submenu dropright">
+						<a style=" color: rgb(0,167,89);" class="dropdown-item dropdown-toggle" href="#!"
+							id="dropdown0501" role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">Overview</a>
 
-								<ul class="dropdown-menu" aria-labelledby="dropdown0501">
-									<li><a style=" color: rgb(0,167,89);" class="dropdown-item" href="index.html">Business services</a></li>
-									<li><a style=" color: rgb(0,167,89);" class="dropdown-item" href="index.html">Marketplace</a></li>
-								</ul>
-							</li>
+						<ul class="dropdown-menu" aria-labelledby="dropdown0501">
+							<li><a style=" color: rgb(0,167,89);" class="dropdown-item" href="index.html">Business
+									services</a></li>
+							<li><a style=" color: rgb(0,167,89);" class="dropdown-item"
+									href="index.html">Marketplace</a></li>
 						</ul>
 					</li>
-					<li class="nav-item dropdown @@about">
-						<a style=" color: rgb(0,167,89);" class="nav-link dropdown-toggle" href="about.html" data-toggle="dropdown">About
-							<span><i id="icons" class="ti-angle-down"></i></span>
-						</a>
+				</ul>
+				</li>
+				<li class="nav-item dropdown @@about">
+					<a style=" color: rgb(0,167,89);" class="nav-link dropdown-toggle" href="about.html"
+						data-toggle="dropdown">About
+						<span><i id="icons" class="ti-angle-down"></i></span>
+					</a>
 
-						<ul class="dropdown-menu">
-							<!-- <li><a class="dropdown-item @@team" href="team.html">Team</a></li>
-							<li><a class="dropdown-item @@career" href="career.html">Career</a></li>
-							<li><a class="dropdown-item @@blog" href="blog.html">Blog</a></li>
+					<ul class="dropdown-menu">
+						<li><a style=" color: rgb(0,167,89);" class="dropdown-item @@team"
+								href="business_services.html">Business Services</a></li>
+						<li><a style=" color: rgb(0,167,89);" class="dropdown-item @@career"
+								href="business_payments.html">Business Payments</a></li>
+						<!-- <li><a class="dropdown-item @@blog" href="blog.html">Blog</a></li>
 							<li><a class="dropdown-item @@blogSingle" href="blog-single.html">Blog Single</a></li>
 							<li><a class="dropdown-item @@privacy" href="privacy-policy.html">Privacy</a></li>
 							<li><a class="dropdown-item @@faq" href="FAQ.html">FAQ</a></li>
@@ -380,53 +403,63 @@
 							<li><a class="dropdown-item" href="404.html">404</a></li>
 							<li><a class="dropdown-item" href="comming-soon.html">Coming Soon</a></li> -->
 
-							<li class="dropdown dropdown-submenu dropleft">
-								<a style=" color: rgb(0,167,89);" class="dropdown-item dropdown-toggle" href="#!" id="dropdown0501" role="button"
-									data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Overview</a>
+						<li class="dropdown dropdown-submenu dropleft">
+							<a style=" color: rgb(0,167,89);" class="dropdown-item dropdown-toggle" href="#!"
+								id="dropdown0501" role="button" data-toggle="dropdown" aria-haspopup="true"
+								aria-expanded="false">Overview</a>
 
-								<ul class="dropdown-menu" aria-labelledby="dropdown0501">
-									<li><a style=" color: rgb(0,167,89);" class="dropdown-item" href="index.html">About</a></li>
-									<li><a style=" color: rgb(0,167,89);" class="dropdown-item" href="index.html">Board Member</a></li>
-								</ul>
-							</li>
-							<li class="dropdown dropdown-submenu dropleft">
-								<a style=" color: rgb(0,167,89);" class="dropdown-item dropdown-toggle" href="#!" id="dropdown0501" role="button"
-									data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Media Center</a>
+							<ul class="dropdown-menu" aria-labelledby="dropdown0501">
+								<li><a style=" color: rgb(0,167,89);" class="dropdown-item"
+										href="index.html">About</a></li>
+								<li><a style=" color: rgb(0,167,89);" class="dropdown-item" href="index.html">Board
+										Member</a></li>
+							</ul>
+						</li>
+						<li class="dropdown dropdown-submenu dropleft">
+							<a style=" color: rgb(0,167,89);" class="dropdown-item dropdown-toggle" href="#!"
+								id="dropdown0501" role="button" data-toggle="dropdown" aria-haspopup="true"
+								aria-expanded="false">Media Center</a>
 
-								<ul class="dropdown-menu" aria-labelledby="dropdown0501">
-									<li><a style=" color: rgb(0,167,89);" class="dropdown-item" href="index.html">News & Announcements</a></li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-					<li class="nav-item dropdown @@contact">
-						<a style=" color: rgb(0,167,89);" class="nav-link dropdown-toggle" href="contact.html" data-toggle="dropdown">Contact
-							<span><i id="icons" class="ti-angle-down"></i></span>
-						</a>
+							<ul class="dropdown-menu" aria-labelledby="dropdown0501">
+								<li><a style=" color: rgb(0,167,89);" class="dropdown-item" href="index.html">News &
+										Announcements</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="nav-item dropdown @@contact">
+					<a style=" color: rgb(0,167,89);" class="nav-link dropdown-toggle" href="contact.html"
+						data-toggle="dropdown">Contact
+						<span><i id="icons" class="ti-angle-down"></i></span>
+					</a>
 
-						<ul class="dropdown-menu">
+					<ul class="dropdown-menu">
 
-							<li class="dropdown dropdown-submenu">
-								<a style=" color: rgb(0,167,89);" class="dropdown-item dropdown-toggle" href="#!" id="dropdown0501" role="button"
-									data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Costumer support</a>
-								<!-- 
+						<li class="dropdown dropdown-submenu">
+							<a style=" color: rgb(0,167,89);" class="dropdown-item dropdown-toggle" href="#!"
+								id="dropdown0501" role="button" data-toggle="dropdown" aria-haspopup="true"
+								aria-expanded="false">Costumer support</a>
+							<!-- 
 								<ul class="dropdown-menu" aria-labelledby="dropdown0501">
 									<li><a class="dropdown-item" href="index.html">About</a></li>
 									<li><a class="dropdown-item" href="index.html">Board Member</a></li>
 								</ul> -->
-							</li>
-							<li class="dropdown dropdown-submenu dropleft">
-								<a style=" color: rgb(0,167,89);" class="dropdown-item dropdown-toggle" href="#!" id="dropdown0501" role="button"
-									data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Help Center</a>
+						</li>
+						<li class="dropdown dropdown-submenu dropleft">
+							<a style=" color: rgb(0,167,89);" class="dropdown-item dropdown-toggle" href="#!"
+								id="dropdown0501" role="button" data-toggle="dropdown" aria-haspopup="true"
+								aria-expanded="false">Help Center</a>
 
-								<ul class="dropdown-menu" aria-labelledby="dropdown0501">
-									<li><a style=" color: rgb(0,167,89);" class="dropdown-item" href="index.html">Account Varification</a></li>
-									<li><a style=" color: rgb(0,167,89);" class="dropdown-item" href="index.html">qitaf points</a></li>
-									<!-- <li><a class="dropdown-item" href="index.html">News & Announcements</a></li> -->
-								</ul>
-							</li>
-						</ul>
-					</li>
+							<ul class="dropdown-menu" aria-labelledby="dropdown0501">
+								<li><a style=" color: rgb(0,167,89);" class="dropdown-item"
+										href="index.html">Account Varification</a></li>
+								<li><a style=" color: rgb(0,167,89);" class="dropdown-item" href="index.html">qitaf
+										points</a></li>
+								<!-- <li><a class="dropdown-item" href="index.html">News & Announcements</a></li> -->
+							</ul>
+						</li>
+					</ul>
+				</li>
 				</ul>
 			</div>
 		</div>
@@ -434,6 +467,142 @@
 	<!--============================
   =            Banner            =
   =============================-->
+
+  
+		<!--====================================
+=            Hero Section            =
+=====================================-->
+<section class="section gradient-banner">
+	<div class="shapes-container">
+		<div class="shape" data-aos="fade-down-left" data-aos-duration="1500" data-aos-delay="100"></div>
+		<div class="shape" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100"></div>
+		<div class="shape" data-aos="fade-up-right" data-aos-duration="1000" data-aos-delay="200"></div>
+		<div class="shape" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"></div>
+		<div class="shape" data-aos="fade-down-left" data-aos-duration="1000" data-aos-delay="100"></div>
+		<div class="shape" data-aos="fade-down-left" data-aos-duration="1000" data-aos-delay="100"></div>
+		<div class="shape" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300"></div>
+		<div class="shape" data-aos="fade-down-right" data-aos-duration="500" data-aos-delay="200"></div>
+		<div class="shape" data-aos="fade-down-right" data-aos-duration="500" data-aos-delay="100"></div>
+		<div class="shape" data-aos="zoom-out" data-aos-duration="2000" data-aos-delay="500"></div>
+		<div class="shape" data-aos="fade-up-right" data-aos-duration="500" data-aos-delay="200"></div>
+		<div class="shape" data-aos="fade-down-left" data-aos-duration="500" data-aos-delay="100"></div>
+		<div class="shape" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0"></div>
+		<div class="shape" data-aos="fade-down" data-aos-duration="500" data-aos-delay="0"></div>
+		<div class="shape" data-aos="fade-up-right" data-aos-duration="500" data-aos-delay="100"></div>
+		<div class="shape" data-aos="fade-down-left" data-aos-duration="500" data-aos-delay="0"></div>
+	</div>
+	<div class="container">
+		<div class="row align-items-center">
+			<div class="col-md-6 order-2 order-md-1 text-center text-md-left">
+				<h1 class="text-white font-weight-bold mb-4">Welcome to Roya Business – Add Money</h1>
+				<p class="text-white mb-5">Welcome to Roya Business! Effortlessly add money to your account and enjoy seamless, secure transactions. Boost your balance instantly and take control of your financial experience today.</p>
+				<!-- <a href="" class="btn btn-main-md">Vision 2030</a> -->
+				<!-- Button trigger modal -->
+				<button type="button" class="btn btn-primary" data-bs-toggle="modal"
+					data-bs-target="#staticBackdrop">
+					Vision 2030
+				</button>
+
+				<!-- Modal -->
+				<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+					tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h1 style=" color: rgb(0,167,89);" class="modal-title fs-2 text-center"
+									id="staticBackdropLabel">VISION 2030
+								</h1>
+								<button type="button" class="btn-close" data-bs-dismiss="modal"
+									aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								<p>
+									Saudi Arabia's Vision 2030 outlines a strategic framework for economic
+									diversification and
+									sustainable development. By promoting digital transformation in the
+									financial sector, Roya
+									Business aligns perfectly with the goals set forth in this vision. The
+									application will foster
+									financial inclusion, promote entrepreneurship, and enhance the overall
+									quality of life for
+									citizens and residents.
+
+								</p>
+								<hr>
+								<p>
+									تحدد رؤية 2030 للمملكة العربية السعودية إطا ًرا استراتيجيًا لتنويع االقتصاد
+									والتنمية المستدامة. من خالل تعزيز التحول
+									تما مع األهداف المحددة في هذه الرؤية. سيعزز التطبيق الشمول المالي، ًم الرقمي
+									في القطاع المالي، تتماشى "رويا بيزنس" ا
+									.ويروج لريادة األعمال، ويحسن نوعية الحياة بشكل عام للمواطنين والمقيمين
+								</p>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-outline-danger"
+									data-bs-dismiss="modal">Close</button>
+								<!-- <button type="button" class="btn btn-outline-success">Understood</button> -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 text-center order-1 order-md-2">
+				<img style="
+				height: 420px;
+				width: 200px;
+				box-shadow: 20px 25px 25px rgb(28, 40, 51) ;
+				border-radius: 10px;
+			" class="img-fluid" src="images/welcome_image.jpeg" alt="screenshot">
+			</div>
+		</div>
+	</div>
+</section>
+<!--====  End of Hero Section  ====-->
+
+<!-- <section class="section pt-0 position-relative pull-top">
+	<div class="container">
+		<div class="rounded shadow p-5 bg-white">
+			<div class="row">
+				<div class="col-lg-3 col-md-6 mt-5 mt-md-0 text-center">
+					<i id="icons" id="icons" class="ti-timer text-primary h1"></i>
+					<h3 class="mt-4 text-capitalize h5 ">Real-Time Transations</h3>
+					<p class="regular text-muted">The application ensures immediate processing of
+						transactions, which enhances user satisfaction by providing instant confirmation of
+						payments and transfers</p>
+				</div>
+				<div class="col-lg-3 col-md-6 mt-5 mt-md-0 text-center">
+					<i id="icons" class="ti-lock text-primary h1"></i>
+					<h3 class="mt-4 text-capitalize h5 ">Secure and Compilation</h3>
+					<p class="regular text-muted">User security is a top priority for Roya Business. The
+						application will
+						implement robust encryption methods and multi-factor authentication to
+						safeguard user data.
+					</p>
+				</div>
+				<div class="col-lg-3 col-md-6 mt-5 mt-lg-0 text-center">
+					<i id="icons" class="ti-layout-media-overlay text-primary h1"></i>
+					<h3 class="mt-4 text-capitalize h5 ">SADAD Bill Payments</h3>
+					<p class="regular text-muted">The integration of SADAD payments allows users to settle
+						utility bills and government services directly through the app, eliminating the hassle
+						of multiple payment platforms.</p>
+					</p>
+				</div>
+				<div class="col-lg-3 col-md-6 mt-5 mt-lg-0 text-center">
+					<i id="icons" class="ti-layout-tab text-primary h1"></i>
+					<h3 class="mt-4 text-capitalize h5 ">Manage Beneficiaries</h3>
+					<p class="regular text-muted">Effortlessly manage beneficiaries with Roya Business—add,
+						edit, or remove contacts securely, ensuring smooth, quick transfers and control over
+						transactions.</p>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section> -->
+
+<!--==================================
+=            Feature Grid            =
+===================================-->
 	<div class="section banner-full">
 		<div class="container">
 			<div class="row">
@@ -457,13 +626,13 @@
 						<p>
 							You can top up your roya business account 
 							<br> and card with different options: 
-							<br> Apple pay, Iban transfer, Sadad or 
+							<br> Roya Business pay, Iban transfer, Sadad or 
 							<br>by adding your bank card
 							
 						</p>
 						<ul class="list-inline app-badge">
 							<li class="list-inline-item">
-								<!-- <a href="#"><img src="images/app/appple-store.jpg" alt="Apple Store"></a> -->
+								<!-- <a href="#"><img src="images/app/appple-store.jpg" alt="Roya Business Store"></a> -->
 							</li>
 							<li class="list-inline-item">
 								<div class="numericList">
@@ -472,9 +641,9 @@
 								  
 									  <ol class="numericList__list">
 												<li style="transform-origin: 403.75px 12px; transform: translate(0px, 0px); opacity: 1;">Click the “Add money” button</li>
-												<li style="transform-origin: 403.75px 12px; transform: translate(0px, 0px); opacity: 1;">Select the Apple Pay option</li>
+												<li style="transform-origin: 403.75px 12px; transform: translate(0px, 0px); opacity: 1;">Select the Roya Business Pay option</li>
 												<li style="transform-origin: 403.75px 12px; transform: translate(0px, 0px); opacity: 1;">Enter the amount </li>
-												<li style="transform-origin: 403.75px 12px; transform: translate(0px, 0px); opacity: 1;">Select a card from your Apple Wallet to add money</li>
+												<li style="transform-origin: 403.75px 12px; transform: translate(0px, 0px); opacity: 1;">Select a card from your Roya Business Wallet to add money</li>
 												<li style="transform-origin: 403.75px 12px; transform: translate(0px, 0px); opacity: 1;">Confirm to top up your wallet in seconds!</li>
 											</ol>
 									</div>
@@ -482,9 +651,9 @@
 								<!-- <a href="#"><img src="images/app/google-play.jpg" alt="Google Play"></a> -->
 							</li>
 						</ul>
-						<div class="support">
+						<!-- <div class="support">
 							<img class="img-fluid" src="images/icons/supported-services.png" alt="supported-services">
-						</div>
+						</div> -->
 					</div>
 				</div>
 			</div>
